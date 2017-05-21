@@ -1,0 +1,75 @@
+<head>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<div class="pace-done">
+  <div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><div class="pace  pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+
+          <div *ngFor="let faculty of faculties" class="col-lg-4">
+              <div class="contact-box">
+                  
+                  <div class="col-sm-4">
+                      <div class="text-center">
+                          <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
+                          <!-- <div class="m-t-xs font-bold">{{}}</div> -->
+                      </div>
+                  </div>
+                  <div class="col-sm-8">
+                      <h3><strong>{{faculty.name}}</strong></h3>
+                      <p><i class="fa fa-envelope"></i>{{faculty.email}}</p>
+                      <address>
+                          <strong>{{faculty.address}}</strong><br>
+                          <abbr title="Phone"><i class="fa fa-phone"></i></abbr> {{faculty.contact}}
+                      </address>
+                      <br>
+                      <br>
+                      <input type="number" min="0" max="10" #rating name="rating" [value]="faculty.rating" />
+                      <a href="#" (click)="ratingData(rating.value,$event)" [id]="faculty.name">Submit</a>
+                  </div>
+                  <div class="clearfix"></div>
+                      
+              </div>
+          </div>
+
+                </div>
+            </div>
+
+
+
+
+
+    <!-- Mainly scripts -->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="assets/js/inspinia.js"></script>
+    <script src="assets/js/plugins/pace/pace.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $('.contact-box').each(function() {
+                animationHover(this, 'pulse');
+            });
+        });
+    </script>
+  </div>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CLASS-IFY | Register</title>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">C</h1>
+
+            </div>
+            <h3>Register to CLASS-IFY</h3>
+            <p>Create account to see it in action.</p>
+            <form class="m-t" role="form" #register="ngForm" (ngSubmit)="registerData(register.value,$event)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name" name="name"
+                   ngModel required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" ngModel class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" ngModel placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Contact" name="contact" ngModel required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="address" ngModel class="form-control" placeholder="Address" required>
+                </div>
+                <div class="form-group radio">
+                    <div class="row">
+                    <div class="col-xs-4">
+                   <input type="radio" name="gender" ngModel value="M" checked> Male<br>
+                     </div>
+                     <div class="col-xs-4">
+                     <input type="radio" name="gender" ngModel value="F"> Female<br>
+                     </div>
+                     <div class="col-xs-4">
+                     <input type="radio" name="gender" ngModel value="O"> Other
+                    </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+
+                    <select class="form-control" name="usertype" ngModel >
+                        <option selected="selected" >Register as</option>
+                         <option>Director</option>
+                        <option>Student</option>
+                        <option>Teacher</option>
+                         <option>Receptionist</option>
+                     </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+
+                <p class="text-muted text-center"><small>Already have an account?</small></p>
+                <a class="btn btn-sm btn-white btn-block" [routerLink]="['/login']">Login</a>
+            </form>
+            <p class="m-t"> <small>Class-ify &copy; 2017</small> </p>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="assets/js/jquery-2.1.1.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green'
+            });
+        });
+    </script>
+</body>
+
+</html>
