@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ClassIfy
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
@@ -29,3 +30,7 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# Class-ify
+Modern online classes Management system written in Angular 2
+>>>>>>> 1c73c3f128d67d4f6dcdda988dfc1e3c623b2c6c
